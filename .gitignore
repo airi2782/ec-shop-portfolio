@@ -2,3 +2,5 @@
 .env
 mysql/
 www/html/pic
+www/html/add_item.php
+www/html/administrator.php

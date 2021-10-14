@@ -2,7 +2,7 @@
 require_once(__DIR__ . '/../config/config.php');
 require_once(__DIR__ . '/../lib/Controller/In_cart.php');
 require_once(__DIR__ . '/../lib/Controller/Log_in.php');
-require_once(__DIR__ . '/../lib/Controller/Purchase_confirmation.php');
+// require_once(__DIR__ . '/../lib/Controller/Purchase_confirmation.php');
 include(__DIR__ . '/header.php');
 
 $in_cart = new \MyApp\Controller\In_cart();

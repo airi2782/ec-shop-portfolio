@@ -5,7 +5,6 @@ require_once(__DIR__ . '/../lib/Model/Item.php');
 
 $app =new \MyApp\Controller\Index();
 $items = $app->run();
-// var_dump($_SESSION['me']->user_id);
 
 ?>
 
@@ -25,16 +24,16 @@ $items = $app->run();
 <div class = "header">
   <form action = "favorite.php" method = "post" name = "favorite">
     <input type = "hidden" name = "user_id" value = "<?=h($_SESSION["me"]->user_id)?>">
-    <input type = "hidden" name = "token" value = "<?= h($_SESSION["token"])?>">
+    <input type = "hidden" name = "token" value = "<?=h($_SESSION["token"])?>">
     <a href = "javascript:favorite.submit()" class = "favorite">♥</a>
   </form>
         <?=!isset($_SESSION['me'])?'<li><a href = "cart.php" class = "go-cart">cart</a></li>':
-        '<li><form action = "cart.php" method = "post" name = "cart">
-            <input type = "hidden" name = "user_id" value = "<?=h($_SESSION["me"]->user_id)?>">
-            <input type = "hidden" name = "token" value = "<?= h($_SESSION["token"])?>">
-            <a href = "javascript:cart.submit()" class = "go-cart">cart</a>
-            </form>
-        </li>'?>
+        "<form action = 'cart.php' method = 'post' name = 'cart'>
+            <input type = 'hidden' name = 'user_id' value = ".$_SESSION['me']->user_id.">
+            <input type = 'hidden' name = 'token' value = ".$_SESSION['token'].">
+            <a href = 'javascript:cart.submit()' class = 'go-cart'>cart</a>
+        </form>"
+        ?>
   <dl class = "menu">
     <dt>menu</dt>
     <dd>

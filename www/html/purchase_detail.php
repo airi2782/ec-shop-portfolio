@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
-require_once(__DIR__ . '/../lib/Controller/Purchase_detail.php');
+// require_once(__DIR__ . '/../lib/Controller/Purchase_detail.php');
 // require_once(__DIR__ . '/../lib/Model/Purchase_histry.php');
 include(__DIR__ . '/header.php');
 

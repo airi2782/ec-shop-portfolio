@@ -7,7 +7,7 @@ include(__DIR__ . '/header.php');
 $in_cart = new \MyApp\Controller\In_cart();
 $in_cart->run();
 $cart_items = $_SESSION['cart_items'];
-var_dump($_SESSION['cart_items']);
+// var_dump($_SESSION['cart_items']);
 // var_dump($_SESSION['cart_items'][0]->cart_qty);
 // var_dump($_SESSION['array']);
 ?>
@@ -36,7 +36,6 @@ var_dump($_SESSION['cart_items']);
       <input type = "hidden" class = "update_cart_id" name = "update_cart_id"  value = "<?=h($cart_item->cart_id)?>">
       <input type = "hidden" id = "user_id" name = "user_id" value = "<?=h($_SESSION['me']->user_id)?>">
       <input type = "hidden" id = "update_array_num" name = "update_array_num" value = "<?=h($in_cart->array_search_num($cart_item,$cart_items))?>">
-      <?php var_dump($in_cart->array_search_num($cart_item,$cart_items))?>
       <input type = "submit" id = "update" class = "update"  value = "個数変更">
       <input type = "hidden" class = "token" name = "token" value = "<?=h($_SESSION['token'])?>">
 

@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nginx:
+  web:
     image: nginx:latest
     ports:
       - 8080:80
@@ -12,7 +12,7 @@ services:
       - ./www/lib/Model:/var/www/lib/Model
     depends_on:
       - php
-    container_name: nginx_web
+    container_name: web
 
   php:
     build: ./php
@@ -31,8 +31,8 @@ services:
     build: ./db
     # restart: always
     hostname: my_mysql
-    ports:
-      - 13306:3306
+    # ports:
+    #   - 13306:3306
     # command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     volumes:
       - ./mysql:/var/lib/mysql
@@ -40,5 +40,5 @@ services:
       - ./ec_shop_database.sql:/docker-entrypoint-initdb.d/ec_shop_database.sql    
     environment:
       - .env
-    container_name: db_mysql1
+    container_name: db_mysql
 
