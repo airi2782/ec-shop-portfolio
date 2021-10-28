@@ -18,12 +18,13 @@ class Sign_up extends \MyApp\Controller\Controller{
     }
   
     $this->set_values('user_name',$_POST['user_name']);
+    $this->set_values('gender_id',$_POST['gender_id']);
     $this->set_values('email',$_POST['email']);
     $this->set_values('phone_num',$_POST['phone_num']);
     $this->set_values('address',$_POST['address']);
     
 
-    if($this->has_error){
+    if($this->has_errors()){
       return;
     }else{
       try{
@@ -55,10 +56,10 @@ class Sign_up extends \MyApp\Controller\Controller{
       echo 'tokenが間違っています';
     }
 
-    if(isset($_POST['user_name']) || empty($_POST['user_name'])){
+    if(!isset($_POST['user_name']) || empty($_POST['user_name']) || $_POST['user_name'] === '' ){
       throw new \Exception('名前を入力してください');
     }
-    if(isset($_POST['gender']) || empty($_POST['gender']) || $_POST['gender'] ==null){
+    if(!isset($_POST['gender_id']) || empty($_POST['gender_id'])){
       throw new \Exception('性別を選択してください');
     }
     if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
@@ -70,13 +71,12 @@ class Sign_up extends \MyApp\Controller\Controller{
     if(!preg_match('/^0\d{9,10}$/',$_POST['phone_num'])){
       throw new \Exception('電話番号が正しくありません');
     }
-    if(isset($_POST['address']) || empty($_POST['address'])){
+    if(!isset($_POST['address']) || empty($_POST['address'])){
       throw new \Exception('住所を入力してください');
     }
-    if(isset($_POST['payment']) || empty($_POST['payment'])){
+    if(!isset($_POST['payment_id']) || empty($_POST['payment_id'])){
       throw new \Exception('支払い方法を選択してください');
     }
 
-    //電話番号　正しく番号を入力してください
   }
 }

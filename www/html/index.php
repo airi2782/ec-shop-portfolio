@@ -25,9 +25,7 @@ include(__DIR__ . '/header.php');
       <a href = 'show.php?name=<?= h($item->item_name)?>'>
       <?= h($item->item_name)?></a>
     </p>
-    <p class = "item-price">
-    <p class="price">¥<?= number_format(h($item->price)); ?>  ( tax in )</p>
-    </p>
+    <p class="item-price">¥<?= number_format(h($item->price)); ?>  ( tax in )</p>
   </div>
   <?php endforeach ?>
 </div>

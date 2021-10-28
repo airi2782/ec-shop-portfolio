@@ -7,7 +7,6 @@ $get_item_name = $_GET['name'];
 $app = new \MyApp\Controller\Show();
 $shows = $app->run();
 $show = \MyApp\Controller\Show::find_by_name($shows,$get_item_name);
-var_dump($_SESSION['me']->user_id);
 ?>
 
 <div class = "show-item">
@@ -23,23 +22,18 @@ var_dump($_SESSION['me']->user_id);
     <?=h($show->item_name)?>
   </div>
 
-  <!-- <form action = "favorite.php" method = "post" class = "get-favorite" > -->
     <input type = "hidden" name = "item_id" value = "<?=h($show->item_id)?>">
     <input type = "hidden" id = "user_id" name = "user_id" value = "<?=h($_SESSION['me']->user_id)?>">
     <input type = "button" name = "favorite" id = "<?=$app->check_loged_in()?>" class = "get-favorite"  value = "♥">
     <input type = "hidden" name = "token" value = "<?=h($_SESSION['token'])?>">
-  <!-- </form> -->
-
   
 
   <div class = "item-price">
-    <!-- ¥<?=number_format(h($show->price))?>  ( tax in ) -->
+    ¥<?=number_format(h($show->price))?>  ( tax in )
   </div>
 
   <div class = "stock">在庫：<?=$show->stock?>個</div>
 
-
-  <!-- <form action = "cart.php" method = "post"> -->
     <input type = "hidden" id = "item_id" name = "item_id" value = "<?=h($show->item_id)?>">
     <input type = "hidden" id = "item_name" name = "item_name" value = "<?=h($show->item_name)?>">
     <input type = "hidden" id = "img1" name = "img1" value = "<?=h($show->img1)?>">
@@ -49,7 +43,7 @@ var_dump($_SESSION['me']->user_id);
     <input type = "hidden" id = "cart_qty" name = "cart_qty" value = "1">
     <input type = "button" id = <?= $show->stock >=1 ? "cart-in":"back_order"?> value = <?= $show->stock >=1 ? "カートに入れる":"再入荷待ち"?>>
     <input type = "hidden" id = "token" name = "token" value  = "<?=h($_SESSION['token'])?>">
-  <!-- </form> -->
+
 
   <div class = "item-description">
     <?=nl2br(h($show->description))?>

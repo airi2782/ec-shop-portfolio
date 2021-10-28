@@ -10,7 +10,6 @@ class In_cart extends \MyApp\Controller\Controller{
       $this->post_process();
     }
     if(!isset($_SESSION['cart_items']) || $_SESSION['cart_items'] == null){
-      var_dump($_SESSION['cart_items']);
       echo '現在カートには何も入っていません';
       echo "<p><a href = SITE_URL>ホーム画面へ戻る</a></p>";
       echo "<script src='jquery.min.js'></script>
@@ -35,7 +34,6 @@ class In_cart extends \MyApp\Controller\Controller{
         //未ログインユーザー用のDBに保存してSESSIONに移したらDBの内容は消す
         //その間はトランザクション
         $cart_model->db->beginTransaction();
-
 
         $cart_model->add_no_login_cart([
           'item_id'=>$_POST['item_id'],

@@ -42,12 +42,10 @@ body{
 }
 
 .login{
-  /* display: inline-block; */
   font-size:25px;
   font-weight: bold;
   display: block;
   width: 75px;
-  /* background-color: tomato; */
   cursor:pointer;
   margin:8px 10px 0 0;
   color: rgb(111, 110, 110);
@@ -108,15 +106,15 @@ body{
   padding: 0;
   font-size: 12px;
 }
-.menu li{
+.menu ul li a{
   list-style:none;
+  text-decoration:none;
   color: rgb(111, 110, 110);
 }
-/* 
-.title{
-  position:relative;
-  overflow:hidden;
-} */
+
+.menu ul li a:hover{
+  color: rgba(111, 110, 110, 0.7);
+}
 
 .title_logo{
   text-align:center;
@@ -208,17 +206,17 @@ h2{
 }
 
 .item-name a:link{
-  color: #a0522d;
+  color: #ff9999;
 }
 .item-name a:visited{
-  color: #ffcccc;
+  color: #fcb4b4;
 }
 .item-name a:hover{
-  color: #ff9999;
+  color: #ffcccc;
 }
 
 .item-price{
-  color: gray;
+  color: rgb(88, 88, 88);
   font-size:20px;
   font-weight:bold;
 }
@@ -530,29 +528,73 @@ li{
 .delivery-img{
   width: 70%;
   height: 750px;
-  border-radius:30px;
+  border-radius: 30px;
   margin-top: 50px;
 }
 
-/*sign_up*/
-.sign-up{
+/*signup.php*/
+.signup-title{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.signup-input{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.signup-botton{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.go-login{
+  text-align: center;
+}
+
+.signup-error{
+  text-align: center;
+  color: red;
+}
+
+/*login.php*/
+.login-title{
   text-align: center;
   margin-top: 180px;
 }
-
-/*log-in*/
-.log-in{
+.login-input{
   text-align: center;
-  margin-top: 180px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.login-botton{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.go-signup{
+  text-align: center;
+}
+
+.go-home{
+  text-align: center;
+  display: block;
+}
+
+.login-error{
+  text-align: center;
+  color: red;
 }
 
 /*purchase_history.php*/
 .purchase-history-title{
-  text-align:center;
+  text-align: center;
 }
 .purchase-histories{
   margin-bottom: 10px;
-  text-align:center;
+  text-align: center;
 }
 
 .purchase-time{

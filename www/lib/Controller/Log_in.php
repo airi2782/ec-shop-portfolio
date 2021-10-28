@@ -21,7 +21,7 @@ class Log_in extends \MyApp\Controller\Controller{
 
     //エラーが入っていないかチェックする
     if($this->has_errors()){
-      echo "エラー入ってます";
+      return;
       //エラーが入っていなければログイン処理
     }else{
       try{
@@ -37,6 +37,7 @@ class Log_in extends \MyApp\Controller\Controller{
       session_regenerate_id(true);
       $_SESSION['me'] = $user;
 
+      //もしカートに何か入っていたらデータをcartテーブルに移す
       if(isset($_SESSION['cart_items'])){
         try{
           $cart_model = new \MyApp\Model\Cart();

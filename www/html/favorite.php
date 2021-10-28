@@ -6,8 +6,6 @@ include(__DIR__ . '/header.php');
 $app = new \MyApp\Controller\In_favorite();
 $app->run();
 $favorite_items = $_SESSION['favorite_items'];
-// var_dump($_SESSION['favorite_items']);
-var_dump($_POST['user_id']);
 
 ?>
 
@@ -56,12 +54,10 @@ var_dump($_POST['user_id']);
             .done( $(function(){
               $('#mask').fadeIn();
               $('#mordal').fadeIn();}))
-            
-            
+                      
         })
       })
   </script>
-
 
 
 <?php include(__DIR__ . '/footer.php');?>

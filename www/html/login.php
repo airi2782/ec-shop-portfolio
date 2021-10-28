@@ -11,25 +11,25 @@ $app->run();
 <head>
 <meta charset = "utf-8">
 <title>ec_shop</title>
-<link rel = "stylesheet" href = "styles10.css">
+<link rel = "stylesheet" href = "styles36.css">
 </head>
 <body>
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
     <div class = "log-in">
-      <h1>ログイン画面</h1>
-      <div class = "error"><?=h($app->get_errors("log_in"));?></div>
+      <h1 class = "login-title">ログイン画面</h1>
+      <div class = "login-error"><?=h($app->get_errors("log_in"));?></div>
       <form action = "" method = "post">
-        <p>メールアドレス：<input type = "text" name = "email" placeholder = "メールアドレス" value = "<?=h($app->get_values('email'));?>"></p>
-        <p>　　パスワード：<input type = "password" name = "password" placeholder = "パスワード"></p>
-        <p><input type = "submit" value = "ログイン"></p>
+        <div class = "login-input">メールアドレス：<input type = "text" name = "email" placeholder = "メールアドレス" value = "<?=h($app->get_values('email'));?>"></div>
+        <div class = "login-input">　　パスワード：<input type = "password" name = "password" placeholder = "パスワード"></div>
+        <div class = "login-botton"><input type = "submit" value = "ログイン"></div>
         <input type = "hidden" name = "token" value = "<?= h($_SESSION["token"])?>">
       </form>
 
-      <p>新規登録の方は<a href = "signup.php">こちら</a></p>
+      <div class = "go-signup">新規登録の方は<a href = "signup.php">こちら</a></div>
+      <div class = "go-home"><a href = "index.php">ホーム画面へ</a></div>
 
-      <p><a href = "administrator.php">管理者用ページ</a></p>
     </div>
     <?php include(__DIR__ . '/footer.php');?>
   </body>

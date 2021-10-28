@@ -341,7 +341,14 @@ value(1,1,1,'かすみ草パールバレッタ',1300,2,
 'スモークピンクのフラワーモチーフとミルクティ色のドロップのようなビーズを使ったピアス。
 秋冬らしいお色で、ほっこり可愛く使っていただけます。
 普段使いは勿論、デートやお出かけなどにも是非･.｡*･.｡*',
-'pic/item19/img1.png','/pic/item19/img2.png','/pic/item19/img3.png','/pic/item19/img4.png',now(),now());
+'pic/item19/img1.png','/pic/item19/img2.png','/pic/item19/img3.png','/pic/item19/img4.png',now(),now()),
+
+(20,1,1,'かすみ草木目バレッタ',1200,1,
+'本物のかすみ草とアリッサムを使ったバレッタです。
+木目とボルトーカラーが秋らしく、大人可愛いでサインです。
+普段使いは勿論、デートやお出かけなどにも是非･.｡*･.｡*',
+'pic/item20/img1.png','/pic/item20/img2.png','/pic/item20/img3.png','/pic/item20/img4.png',now(),now());
+
 
 
 
