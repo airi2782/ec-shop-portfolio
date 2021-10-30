@@ -7,9 +7,7 @@ include(__DIR__ . '/header.php');
 $in_cart = new \MyApp\Controller\In_cart();
 $in_cart->run();
 $cart_items = $_SESSION['cart_items'];
-// var_dump($_SESSION['cart_items']);
-// var_dump($_SESSION['cart_items'][0]->cart_qty);
-// var_dump($_SESSION['array']);
+
 ?>
 
 <h1 class = "cart-title">カート</h1>

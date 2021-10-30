@@ -1,15 +1,11 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
-// require_once(__DIR__ . '/../lib/Controller/Purchase_detail.php');
-// require_once(__DIR__ . '/../lib/Model/Purchase_histry.php');
 include(__DIR__ . '/header.php');
 
 $purchase_detail_history = new \MyApp\Controller\Purchase_detail();
 $purchase_detail_history->run();
 $purchase_details = $_SESSION['purchase_details'];
 $purchase_time = $_SESSION['purchase_time'];
-// var_dump($purchase_time);
-// var_dump($_SESSION['purchase_time']);
 
 ?>
 

@@ -2,7 +2,6 @@
 require_once(__DIR__ . '/../config/config.php');
 require_once(__DIR__ . '/../lib/Controller/In_cart.php');
 require_once(__DIR__ . '/../lib/Controller/Log_in.php');
-// require_once(__DIR__ . '/../lib/Controller/Purchase_confirmation.php');
 include(__DIR__ . '/header.php');
 
 $in_cart = new \MyApp\Controller\In_cart();
@@ -12,9 +11,6 @@ $purchase_confirmation->run();
 
 $cart_items = $_SESSION['cart_items'];
 $user = $_SESSION['me'];
-
-// var_dump($_SESSION['cart_items']);
-// var_dump($_SESSION['me']);
 
 ?>
 <div class = "purchase_confirmation">

@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
 require_once(__DIR__ . '/../lib/Controller/Log_in.php');
-// include(__DIR__ . '/header.php');
+
 $app = new MyApp\Controller\Log_in();
 $app->run();
 ?>

@@ -62,7 +62,7 @@ class Sign_up extends \MyApp\Controller\Controller{
     if(!isset($_POST['gender_id']) || empty($_POST['gender_id'])){
       throw new \Exception('性別を選択してください');
     }
-    if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+    if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
       throw new \Exception('メールアドレスが正しくありません');
     }
     if(!preg_match('/\A[a-zA-Z0-9]+\z/',$_POST['password'])){
