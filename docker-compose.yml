@@ -29,11 +29,11 @@ services:
 
   db:
     build: ./db
-    # restart: always
-    hostname: my_mysql
-    # ports:
-    #   - 13306:3306
-    # command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    restart: always
+    # hostname: my_mysql
+    ports:
+      - 13306:3306
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     volumes:
       - ./mysql:/var/lib/mysql
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
