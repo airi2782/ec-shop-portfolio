@@ -1,6 +1,8 @@
 .DS_Store
 .env
 mysql/
+nginx/
+php/
 www/html/pic
 www/html/add_item.php
 www/html/administrator.php
