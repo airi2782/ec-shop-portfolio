@@ -3,6 +3,7 @@
 mysql/
 nginx/
 php/
+www/config/config.php
 www/html/pic
 www/html/add_item.php
 www/html/administrator.php

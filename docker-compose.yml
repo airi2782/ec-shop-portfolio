@@ -1,38 +1,21 @@
 version: '3'
 services:
-  # web:
-  #   image: nginx:latest
-  #   build: 
-  #     context: ./
-  #     dockerfile: ./nginx/Dockerfile
-  #   ports:
-  #     - 8080:80
-  #   volumes:
-  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-  #     - ./www/html:/var/www/html
-  #     - ./www/config:/var/www/config
-  #     - ./www/lib/Controller:/var/www/lib/Controller
-  #     - ./www/lib/Model:/var/www/lib/Model
-  #   depends_on:
-  #     - php
-  #   container_name: web
-
-  web:
-    build:
-      context: ./
-      dockerfile: ./php-apache/Dockerfile
+  web1:
+    build: ./php-apache
+      # context: ./
+      # dockerfile: ./php-apache/Dockerfile
     ports:
       - 8000:80
     volumes:
-      - ./www/html:/var/www/html
-      - ./www/config:/var/www/config
-      - ./www/lib/Controller:/var/www/lib/Controller
-      - ./www/lib/Model:/var/www/lib/Model
+      - ./php-apache/www/html:/var/www/html
+      - ./php-apache/www/config:/var/www/config
+      - ./php-apache/www/lib/Controller:/var/www/lib/Controller
+      - ./php-apache/www/lib/Model:/var/www/lib/Model
     tty: true
     stdin_open: true
     depends_on:
       - db
-    container_name: web
+    container_name: web1
 
   db:
     build: ./db
