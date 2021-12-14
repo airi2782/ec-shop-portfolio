@@ -10,9 +10,7 @@ class In_favorite extends \MyApp\Controller\Controller{
     }
     if(!isset($_SESSION['favorite_items']) || $_SESSION['favorite_items'] == null){
       echo "現在お気に入り登録されているものはありません";
-      // var_dump($_SESSION['favorite_items']);
-      // var_dump($_POST['user_id']);
-      echo "<p><a href = SITE_URL>ホーム画面へ戻る</a></p>";
+      echo "<p><a href = 'index.php?page=1'>ホーム画面へ戻る</a></p>";
       echo "<script src='jquery.min.js'></script>
       <script>
         $('.menu dd').hide();
