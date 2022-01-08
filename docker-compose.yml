@@ -1,11 +1,11 @@
 version: '3'
 services:
-  web1:
+  web:
     build: ./php-apache
       # context: ./
       # dockerfile: ./php-apache/Dockerfile
-    ports:
-      - 8000:80
+    # ports:
+    #   - 8000:80
     volumes:
       - ./php-apache/www/html:/var/www/html
       - ./php-apache/www/config:/var/www/config
